@@ -42,5 +42,23 @@
     <ClCompile Include="B1007.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="B1008.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="B1009.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="B1010.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="B1010a.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="B1011.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="B1012.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
