@@ -126,10 +126,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="B1005.cpp" />
     <ClCompile Include="B1000.cpp" />
     <ClCompile Include="B1001.cpp" />
     <ClCompile Include="B1002.cpp" />
     <ClCompile Include="B1003.cpp" />
+    <ClCompile Include="B1004.cpp" />
+    <ClCompile Include="B1006.cpp" />
+    <ClCompile Include="B1007.cpp" />
+    <ClCompile Include="B1008.cpp" />
+    <ClCompile Include="B1009.cpp" />
+    <ClCompile Include="B1010.cpp" />
+    <ClCompile Include="B1010a.cpp" />
+    <ClCompile Include="B1011.cpp" />
+    <ClCompile Include="B1012.cpp" />
     <ClCompile Include="B1032.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
