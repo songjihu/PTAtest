@@ -1,19 +1,2 @@
-﻿  B1013.cpp
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(23,25): warning C4244:  “参数”: 从“__int64”转换到“double”，可能丢失数据
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(33,13): warning C4477:  “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“__int64”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(33,13): message :  请考虑在格式字符串中使用“%lld”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(33,13): message :  请考虑在格式字符串中使用“%Id”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(33,13): message :  请考虑在格式字符串中使用“%I64d”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(37,13): warning C4477:  “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“__int64”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(37,13): message :  请考虑在格式字符串中使用“%lld”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(37,13): message :  请考虑在格式字符串中使用“%Id”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(37,13): message :  请考虑在格式字符串中使用“%I64d”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(43,13): warning C4477:  “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“__int64”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(43,13): message :  请考虑在格式字符串中使用“%lld”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(43,13): message :  请考虑在格式字符串中使用“%Id”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(43,13): message :  请考虑在格式字符串中使用“%I64d”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(47,13): warning C4477:  “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“__int64”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(47,13): message :  请考虑在格式字符串中使用“%lld”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(47,13): message :  请考虑在格式字符串中使用“%Id”
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1013.cpp(47,13): message :  请考虑在格式字符串中使用“%I64d”
-  PTA习题.vcxproj -> C:\Users\27524\source\repos\PTAtest\x64\Debug\PTAtest.exe
+﻿  B1019.cpp
+  PTA习题.vcxproj -> C:\Users\宋吉虎\Source\Repos\PTAtest\x64\Debug\PTAtest.exe

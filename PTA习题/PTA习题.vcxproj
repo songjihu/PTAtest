@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -141,6 +141,12 @@
     <ClCompile Include="B1011.cpp" />
     <ClCompile Include="B1012.cpp" />
     <ClCompile Include="B1013.cpp" />
+    <ClCompile Include="B1014.cpp" />
+    <ClCompile Include="B1015AAAAA.cpp" />
+    <ClCompile Include="B1016.cpp" />
+    <ClCompile Include="B1017.cpp" />
+    <ClCompile Include="B1018.cpp" />
+    <ClCompile Include="B1019.cpp" />
     <ClCompile Include="B1032.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
