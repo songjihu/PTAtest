@@ -142,6 +142,9 @@
     <ClCompile Include="B1012.cpp" />
     <ClCompile Include="B1013.cpp" />
     <ClCompile Include="B1020.cpp" />
+    <ClCompile Include="B1021.cpp" />
+    <ClCompile Include="B1022.cpp" />
+    <ClCompile Include="B1023.cpp" />
     <ClCompile Include="B1032.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
