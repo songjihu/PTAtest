@@ -75,5 +75,8 @@
     <ClCompile Include="B1023.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="B1024.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
