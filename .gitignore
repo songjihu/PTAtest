@@ -2,7 +2,4 @@
 # 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
 ################################################################################
 
-/.vs/PTA习题/v16/Browse.VC.opendb
-.vs/PTA习题/v16/Browse.VC.db
-/.vs/PTA习题/v16/*.suo
-/.vs/PTA习题/v16/Browse.VC.db~c98cde3792c8b659628e3e60ec7842fce4297ce2
+/.vs/PTA习题/v16/
