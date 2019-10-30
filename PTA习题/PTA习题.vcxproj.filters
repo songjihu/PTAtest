@@ -63,6 +63,24 @@
     <ClCompile Include="B1013.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="B1014.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="B1015AAAAA.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="B1016.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="B1017.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="B1018.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="B1019.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
     <ClCompile Include="B1020.cpp">
       <Filter>源文件</Filter>
     </ClCompile>

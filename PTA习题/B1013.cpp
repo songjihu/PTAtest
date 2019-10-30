@@ -50,11 +50,7 @@ int main() {
 			
 		}
 
-		//Çóm¸öËØÊı
-		/*if (count == n) {
-			break;
-		}*/
-/*	}
+	}
 	return 0;
 }
 */
