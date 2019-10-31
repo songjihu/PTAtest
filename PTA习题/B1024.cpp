@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+/*#define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,11 +25,8 @@ int main() {
 		//先处理符号
 		printf("-");
 	}
-	else
-	{
-		printf("+");
-	}
-	for (i = 1; a[i] = 'E'; i++) {
+	
+	for (i = 1; a[i] != 'E'; i++) {
 		//E之前
 		answer[count] = a[i];
 		count++;//计算中间长度
@@ -44,7 +41,7 @@ int main() {
 	}
 	i++;//跳过符号
 	jump = 0;
-	for (; a[i] = '\0'; i++) {
+	for (; a[i] != '\0'; i++) {
 		//结束之前，统计要跳的次数
 		jump = jump * 10;
 		jump += a[i] - '0';
@@ -87,7 +84,19 @@ int main() {
 		}
 		else {
 			//向前跳
+			printf("0.");
+			for (j = 0; j < jump - 1; j++) {
+				//打印跳过的0
+				printf("0");
+			}
+			for (j = 0; answer[j] != '\0'; j++) {
+				if (answer[j] == '.') {
+					continue;
+				}
+				printf("%c", answer[j]);
+			}
 		}
 	}
 	return 0;
 }
+*/
