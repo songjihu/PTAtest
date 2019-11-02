@@ -84,34 +84,36 @@ void exchange_str(char a[], char b[]) {
 	return;
 }
 
-void exchange_int(int a, int b) {
+void exchange_int(int *a, int *b) {
 	//交换整数
 	int t;
 
-	t = a;
-	a = b;
-	b = t;
+	t = *a;
+	*a = *b;
+	*b = t;
 	
 	return;
 }
 
-void revolve(node a[], int start, int end, int head, int tail) {
-
-	//逆序a[]从start到end位置的链表
+void reverse_n(node a[], int start, int num, char head[], char tail[]) {
+	//开始位置,个数,新头,新尾
+	//逆序a[]从start到num个
+	strcpy(tail, a[start].addr_s);
 	int i = start;
-	int j;
-	//用于交换pre和next
+	int count = 0;
 	int temp, temp1;
-	char ts[10], ts1[10];
+	//循环num次
 	while (1) {
-		temp = a[i].pre;
-
-		TODO://交换前驱后继
-		
-
-		if (i == end) {
+		count++;
+		//交换前保存
+		temp = a[i].next;
+		exchange_int(&a[i].pre, &a[i].next);
+		exchange_str(a[i].pre_s, a[i].next_s);
+		if (count == num) {
+			strcpy(head, a[i].addr_s);
 			break;
 		}
+		i = temp;//否则继续
 	}
 	return;
 }
@@ -121,6 +123,7 @@ int main() {
 	int n = 0;
 	int i = 0, j = 0, count;
 	node a[100002];
+	int b[100002];//存储
 	node start;
 	char temp[10], temp1[10];
 	int temp2 = 0, taddr = 0;
@@ -169,10 +172,10 @@ int main() {
 	//验证打印
 	//print_a(a, start.addr);
 
+	//计算前驱
 	a[i].pre = -1;
 	a[i].pre_s[0] = '-'; a[i].pre_s[1] = '1'; a[i].pre_s[2] = '\0';
 	while (a[i].next != -1) {
-		//计算前驱
 		a[a[i].next].pre = a[i].addr;//后继有人时把后继的前驱定义
 		for (j = 0; j < 10; j++) {
 			a[a[i].next].pre_s[j] = a[i].addr_s[j];
@@ -181,7 +184,32 @@ int main() {
 	}
 
 	//print_a_plus(a, start.addr);
-	TODO://
+
+	
+
+	//交换并连接
+	char newhead[10], newtail[10];//每一段新的开头和结尾
+	int jump = start.next;//跳跃个数
+	//int jump = 2;//跳跃个数
+	int printloc = 0;//记录打印开始的位置
+	n = start.data;//总个数n
+	//前边完整的反转
+	int k = start.addr;//开始位置
+	for (i = 0; i < n / jump; i++) {
+		if (i != 0) {
+			//不是首次则处理连接到后方
+			a[count_addr(newtail)].next = k;
+			if (i == 1) {
+				printloc = count_addr(newhead);
+			}
+		}
+		reverse_n(a, k, jump, newhead, newtail);
+		k = a[count_addr(newhead)].pre;//下次开始的地方
+	}
+	TODO://处理剩余的反转并标记结束的-1
+
+	print_a_plus(a, printloc);
+	
 
 
 	return 0;
