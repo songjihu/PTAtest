@@ -99,5 +99,8 @@
     <ClCompile Include="B1025.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="B1025AAAAA.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

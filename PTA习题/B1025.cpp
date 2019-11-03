@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <vector>
 #include <iostream>
+#include <string.h>
 using namespace std;
 
 struct node
@@ -149,30 +150,19 @@ int main() {
 		for (j = 0; j < 10; j++) {
 			a[taddr].addr_s[j] = temp[j];
 			a[taddr].next_s[j] = temp1[j];
-
 		}
 		//printf("\n%5d %d %5d\n",a[taddr].addr, a[taddr].data, a[taddr].next);
 
 	}
 
-	//特殊情况
-	i = start.addr;
-	if (a[i].next == -1) {
-		//只有一个节点
-		printf("%s %d %s\n", a[i].addr_s, a[i].data, a[i].next_s);
-		return 0;
-	}
-	if (start.next == 0|| start.next == 1) {
-		//不反转
-		print_a(a, i);
-		return 0;
-	}
 
 
 	//验证打印
 	//print_a(a, start.addr);
 
-	//计算前驱
+	//计算前驱并计算链表长度
+	i = start.addr;
+	count = 1;
 	a[i].pre = -1;
 	a[i].pre_s[0] = '-'; a[i].pre_s[1] = '1'; a[i].pre_s[2] = '\0';
 	while (a[i].next != -1) {
@@ -181,7 +171,24 @@ int main() {
 			a[a[i].next].pre_s[j] = a[i].addr_s[j];
 		}
 		i = a[i].next;//后移
+		count++;
 	}
+	start.data = count;
+
+	
+	//特殊情况
+	i = start.addr;
+	if (count == 1) {
+		//只有一个节点
+		printf("%s %d %s\n", a[i].addr_s, a[i].data, a[i].next_s);
+		return 0;
+	}
+	if (start.next > count || start.next == 0 || start.next == 1) {
+		//不反转
+		print_a(a, i);
+		return 0;
+	}
+
 
 	//print_a_plus(a, start.addr);
 
@@ -199,16 +206,29 @@ int main() {
 		if (i != 0) {
 			//不是首次则处理连接到后方
 			a[count_addr(newtail)].next = k;
-			if (i == 1) {
-				printloc = count_addr(newhead);
-			}
+			strcpy(a[count_addr(newtail)].next_s, a[k].addr_s);
 		}
 		reverse_n(a, k, jump, newhead, newtail);
+		if (i == 0) {
+			printloc = count_addr(newhead);
+		}
 		k = a[count_addr(newhead)].pre;//下次开始的地方
 	}
-	TODO://处理剩余的反转并标记结束的-1
-
-	print_a_plus(a, printloc);
+	//处理剩余的并标记结束
+	if (n % jump == 0) {
+		//无剩余
+		k = count_addr(newtail);
+		a[k].next = -1;
+		a[k].next_s[0] = '-'; a[k].next_s[1] = '1'; a[k].next_s[2] = '\0';
+	}
+	else
+	{
+		//连接剩余的
+		a[count_addr(newtail)].next = k;
+		strcpy(a[count_addr(newtail)].next_s, a[k].addr_s);
+	}
+	
+	print_a(a, printloc);
 	
 
 
