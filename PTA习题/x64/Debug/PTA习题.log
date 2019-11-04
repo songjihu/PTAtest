@@ -1,6 +1,4 @@
-﻿  B1025.cpp
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1025.cpp(105,12): warning C4101: “temp1”: 未引用的局部变量
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1025.cpp(131,17): warning C4101: “ctemp1”: 未引用的局部变量
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1025.cpp(127,6): warning C4101: “b”: 未引用的局部变量
-C:\Users\27524\source\repos\PTAtest\PTA习题\B1025.cpp(131,8): warning C4101: “ctemp”: 未引用的局部变量
+﻿  B1027.cpp
+C:\Users\27524\source\repos\PTAtest\PTA习题\B1027.cpp(19,16): warning C4474: printf: 格式字符串中传递的参数太多
+C:\Users\27524\source\repos\PTAtest\PTA习题\B1027.cpp(19,16): message : 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
   PTA习题.vcxproj -> C:\Users\27524\source\repos\PTAtest\x64\Debug\PTAtest.exe
