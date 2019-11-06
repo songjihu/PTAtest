@@ -23,7 +23,7 @@ int count_addr(char temp[]) {
 		flag = -1;
 	}
 	j = 1; count = 0;
-	while (temp[j] != '\0') {
+	while (temp[j] >= '0' && temp[j] >= '9') {
 		count = count * 10 + temp[j] - '0';
 	}
 	return count * flag;
@@ -60,12 +60,11 @@ int main() {
 	start.next = count_addr(temp1);
 
 	for (i = 0; i < start.data; i++) {
-		scanf("%s%d%s", temp, &a[i].data, temp1);
-		a[i].addr = count_addr(temp);
-		a[i].next = count_addr(temp1);
+		scanf("%s%d%s", temp, &a[count_addr(temp)].data, temp1);
+		a[count_addr(temp)].addr = count_addr(temp);
+		a[count_addr(temp)].next = count_addr(temp1);
 	}
 
-	
 	i = start.addr;
 	if (a[i].next == -1) {
 		ctemp = count_back(a[i].addr);
@@ -78,7 +77,7 @@ int main() {
 		a[i + 1].pre = a[i].addr;//后继有人时把后继的前驱定义
 		i = a[i].next;//后移
 	}
-	TODO://
+	
 
 
 	return 0;
