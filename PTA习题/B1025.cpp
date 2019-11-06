@@ -1,84 +1,57 @@
-#define _CRT_SECURE_NO_WARNINGS
+/*#define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 #include <algorithm>
-#include <vector>
-#include <iostream>
 using namespace std;
 
 struct node
 {
-	int addr;
-	int data;
-	int next;
-	int pre;
+	int addr;//地址
+	int data;//数据
+	int next;//后继地址
 };
-
-int count_addr(char temp[]) {
-	int count = 0, j = 0;
-	int flag = 1;//正负
-	if (temp[0] == '-') {
-		flag = -1;
-	}
-	j = 1; count = 0;
-	while (temp[j] >= '0' && temp[j] >= '9') {
-		count = count * 10 + temp[j] - '0';
-	}
-	return count * flag;
-}
-
-char * count_back(int x) {
-	char a[10];
-	int i = 0;
-	for (i = 4; i > -1; i--) {
-		if (x % 10 != 0) {
-			a[i] = x % 10 + '0';
-			x = x / 10;
-		}
-		else
-		{
-			a[i] = '0';
-		}
-	}
-	return a;
-}
 
 int main() {
 
-	int n = 0;
-	int i = 0, j = 0, count;
+	int start = 0, n = 0, jump = 0;
+	int i = 0, j = 0, count = 0;
 	node a[100002];
-	node start;
-	char temp[10], temp1[10];
-	char* ctemp, * ctemp1;
-	int flag = 1;//修改正负
+	int b[100002];//存储链表顺序
+	int t1,t2,t3;//addr num next
 	
-	scanf("%s%d%s", temp, &start.data, temp1);
-	start.addr = count_addr(temp);
-	start.next = count_addr(temp1);
+	scanf("%d%d%d", &start, &n, &jump);
 
-	for (i = 0; i < start.data; i++) {
-		scanf("%s%d%s", temp, &a[count_addr(temp)].data, temp1);
-		a[count_addr(temp)].addr = count_addr(temp);
-		a[count_addr(temp)].next = count_addr(temp1);
+	for (i = 0; i < n; i++) {
+		scanf("%d%d%d", &t1, &t2, &t3);
+		//address number next
+		a[t1].addr = t1;
+		a[t1].data = t2;
+		a[t1].next = t3;
 	}
 
-	i = start.addr;
-	if (a[i].next == -1) {
-		ctemp = count_back(a[i].addr);
-		ctemp1 = count_back(a[i].next);
-		printf("%s%d%s", ctemp, a[i].data, ctemp1);
+	count = 0;
+	t1 = start;
+	for (i = 0; i < n && t1 != -1; i++) {
+		b[i] = t1;
+		t1 = a[t1].next;
+		count++;
 	}
-	a[i].pre = -1;
-	while (a[i].next != -1) {
-		//计算前驱
-		a[i + 1].pre = a[i].addr;//后继有人时把后继的前驱定义
-		i = a[i].next;//后移
+
+	if (jump > 1 && jump <= count) {
+		for (i = 0; i < count / jump; i++) {
+			reverse(b + i * jump, b + (i + 1) * jump);
+		}
 	}
 	
-
-
+	for (i = 0; i < count - 1; i++) {
+		printf("%05d %d %05d\n", b[i], a[b[i]].data, b[i + 1]);
+	}
+	if (count > 0) {
+		printf("%05d %d -1\n", b[i], a[b[i]].data);
+	}
 	return 0;
 }
+*/
