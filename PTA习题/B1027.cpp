@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+/*#define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,32 +8,32 @@
 #include <iostream>
 using namespace std;
 
-void out(int left, int right,char c) {
-	int count = 0;
-	while (count <= left * 2 + right) {
-		if (count < left || count>left + right) {
-			printf(" ");
-		}
-		else
-		{
-			printf("%c", c);
-		}
-		count++;
+void out(int count, char c) {
+	for (int i = 0; i < count; i++) {
+		printf("%c",c);
 	}
-	printf("\n");
+	return;
 }
 
 int main() {
 
 	int n = 0;
 	int i = 0, j = 0;
-	char sign;
+	char temp[2];
+	char sign='0';
 	int sum = 1, count = 0;
 	int rest = 0;
 
-	scanf("%d%c", &n, &sign);
-	if (n == 1) {
-		printf("*\n0");
+	scanf("%d%s", &n, temp);
+	sign = temp[0];
+	if (n == 0) {
+		printf("0");
+		return 0;
+	}
+	if (n < 7) {
+		printf("%c\n",sign);
+		printf("%d", n - 1);
+		
 	}
 	else
 	{
@@ -44,20 +44,24 @@ int main() {
 				break;
 			}
 			sum = sum + 2 * i;
+			count++;//*上边需要打印的行数
 		}
-		count = i - 2;
-		int flag = 0, k = 0;
-		for (i = 0; i < count / 2; i++) {
+		int flag = 0, k = count;
+		for (i = 0; i < count + 1; i++, k--) {
 			//上半部分
-			out(i, sum - 2 * i, sign);
+			out(i, ' '); out(2 * k + 1, sign);
+			printf("\n");
 		}
-		out(i, sum - 2 * i, sign);
-		for (; i >= 0; i--) {
-			out(i, sum - 2 * i, sign);
+		i-=2; k+=2;
+		for (; i >= 0; i--, k++) {
+			out(i, ' '); out(2 * k + 1, sign);
+			printf("\n");
 		}
+		printf("%d", rest);
 	}
 	
-	printf("%d", rest);
+	
 
 	return 0;
 }
+*/
